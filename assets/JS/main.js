@@ -7,40 +7,57 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
-const players = [
+
+const teams = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        image: "src=./assets/img/wayne-barnett-founder-ceo.jpg", 
+        image: "./assets/img/wayne-barnett-founder-ceo.jpg", 
     }, 
 
     {
         name: "Angela Caroll",
         role: "Chief Editor",
-        image: "src=./assets/img/angela-caroll-chief-editor.jpg", 
+        image: "./assets/img/angela-caroll-chief-editor.jpg", 
     }, 
 
     {
         name: "Walter Gordon",
         role: "Office Manager",
-        image: "src=./assets/img/walter-gordon-office-manager.jpg", 
+        image: "./assets/img/walter-gordon-office-manager.jpg", 
     }, 
 
     {
         name: "Angela Lopez",
         role: "Social Media Manager",
-        image: "src=./assets/img/angela-lopez-social-media-manager.jpg", 
+        image: "./assets/img/angela-lopez-social-media-manager.jpg", 
     }, 
 
     {
         name: "Scott Estrada",
         role: "Developer",
-        image: "src=./assets/img/scott-estrada-developer.jpg", 
+        image: "./assets/img/scott-estrada-developer.jpg", 
     }, 
 
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        image: "src=./assets/img/barbara-ramos-graphic-designer.jpg", 
+        image: "./assets/img/barbara-ramos-graphic-designer.jpg", 
     },
 ]
+
+for (let i = 0; i < teams.length; i++){
+    let arrayTeams = teams[i]
+
+    console.log(arrayTeams)
+
+    document.querySelector("main").innerHTML += `
+    <div>
+       <img class="card-img-top" src='${arrayTeams.image}' alt="images team"/>
+       <div>
+          <h1>${arrayTeams.name}</h1>
+          <p>${arrayTeams.role}</p>
+        </di
+    </div>
+ `
+}
